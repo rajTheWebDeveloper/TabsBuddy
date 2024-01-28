@@ -5,7 +5,7 @@ import { Blocks } from "react-loader-spinner";
 
 const Loading = () => {
   return (
-    <section className='fixed top-[45%] left-[50%] translate-[-50%,-50%]'>
+    <section className='h-screen w-[100vw] flex justify-center items-center'>
       <Blocks
         height="80"
         width="80"
