@@ -33,13 +33,23 @@ const Tabs = () => {
     let { id,title,duties,company,dates} = tabsData[activeTab]
 
   return (
-      <section
-        className="w-[90vw] max-w-[800px] mx-auto mt-20 md:grid md:grid-cols-2 justify-start pb-8"
-        style={{ gridTemplateColumns: "1fr 4fr" }}
-      >
-        <Buttons tabsData={tabsData} activeTab={activeTab} setActiveTab={setActiveTab}/>
-        <Info id={id} title={title} duties={duties} company={company} dates={dates}/>
-      </section>
+    <section
+      className="w-[90vw] max-w-[800px] mx-auto mt-8 md:mt-20 md:grid md:grid-cols-2 justify-start pb-8"
+      style={{ gridTemplateColumns: "1fr 4fr" }}
+    >
+      <Buttons
+        tabsData={tabsData}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
+      <Info
+        id={id}
+        title={title}
+        duties={duties}
+        company={company}
+        dates={dates}
+      />
+    </section>
   );
 }
 

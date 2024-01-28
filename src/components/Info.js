@@ -15,7 +15,7 @@ const Info = ({ id, title, duties, company, dates }) => {
           {duties.map((items,idx) => {
             return (
               <div key={idx} className="flex items-center leading-7 text-sm text-gray-500">
-                <p className="mr-4">
+                <p className="mr-4 text-sky-500">
                   <MdKeyboardDoubleArrowRight size={20} />
                 </p>
                 {items}
