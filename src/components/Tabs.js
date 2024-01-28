@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import Buttons from './Buttons';
 import Info from './Info';
+import Loading from '../Loading';
+
 
 
 const Tabs = () => {
@@ -25,7 +27,7 @@ const Tabs = () => {
 
     if(loading)
     {
-        return <h2>Loading...</h2>
+        return <Loading/>
     }
 
     let { id,title,duties,company,dates} = tabsData[activeTab]
