@@ -12,14 +12,14 @@ const Info = ({ id, title, duties, company, dates }) => {
         </button>
         <p>{dates}</p>
         <div className="duties mt-6 leading-6">
-          {duties.map((items) => {
+          {duties.map((items,idx) => {
             return (
-              <p className="flex items-center leading-7 text-sm text-gray-500">
+              <div key={idx} className="flex items-center leading-7 text-sm text-gray-500">
                 <p className="mr-4">
                   <MdKeyboardDoubleArrowRight size={20} />
                 </p>
                 {items}
-              </p>
+              </div>
             );
           })}
         </div>
@@ -29,30 +29,6 @@ const Info = ({ id, title, duties, company, dates }) => {
 }
 
 let StyledInfoButton = styled.section`
-  .port-side {
-    position: relative;
-  }
-
-  .port-side:hover::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    background-color: #0ea5e9;
-    bottom: -30%;
-    animation: hover-bar 0.5s forwards;
-    color: #0ea5e9;
-  }
-
-  @keyframes hover-bar 
-  {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-
   .star-board 
   {
     position: relative;
